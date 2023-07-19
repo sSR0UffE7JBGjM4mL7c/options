@@ -1,6 +1,8 @@
 
     Welcome to Zen Drainer's Options explainations:
 
+Note: Not finished yet, 🔺 emojis means probably need to get deleted
+
     Class Buttons:
         – connect_buttons_class: The class of the button you want to drainer on. Note that this option can be the same as "connect_buttons_class" one, not recommended to edit if you don't need any specific config.
         – drain_buttons_class: The class of the buttons you want the drain process (require "wait_click_of_drain_button_to_start" enabled) and write intructions. Note: this option can be the same as "connect_buttons_class" one, not recommended to edit if you don't require any specific config.
