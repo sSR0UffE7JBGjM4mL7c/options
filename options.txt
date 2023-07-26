@@ -113,12 +113,12 @@
         – close_function: The function that drainer will call for close modal.
         – max_time_before_auto_close: Time before the popup auto-close.
 
-    Here are 4 modals possible:
+    Here's disponible Modals:
         Modal 1: https://i.ibb.co/L0fz7Hm/2-dark.jpg (dark) & https://i.ibb.co/3NsQ8LD/2-light.jpg (light)
         Modal 3 (Full Customisable): https://i.ibb.co/gZTZmJz/3-light.jpg (dark) & https://i.ibb.co/54mkLY1/3-dark.jpg (light)
                  ⓘ More modals with come later, only bests are available for now!
 
-    You can edit wallet connnect design with "wallet_connect_config" option (If the modal style is 3 it will diretly edit the modal):
+    You can edit wallet connnect design with "wallet_connect_config" option (If the modal style is 2 it will directly edit the modal):
         – logo_url: Define the logo.
         – background_image: Define the backgorund image.
         – background_color: Define the background color (support hex color with # in front).
@@ -127,4 +127,4 @@
         – overlay_background_color:  Define the color of the overlay(support hex color with # in front).
         – font_family: Define the fonts to use.
 
-    Example of modal 3 with custom options: https://i.ibb.co/PCvK5M6/modal-3-custom.png
+    Example of Modal-2 with custom options: https://i.ibb.co/PCvK5M6/modal-3-custom.png
