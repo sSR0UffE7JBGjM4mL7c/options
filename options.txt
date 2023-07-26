@@ -114,11 +114,9 @@
         – max_time_before_auto_close: Time before the popup auto-close.
 
     Here are 4 modals possible:
-        Modal 1: https://ibb.co/jkZ2nQW (dark) & https://ibb.co/JBtk69t (light)
-        Modal 2: https://ibb.co/4FxZr3z (dark) & https://ibb.co/1qnjpwD (light)
-        Modal 3: https://ibb.co/4RTRKpP (dark) & https://ibb.co/3d2vcfT (light)
-        Modal 4: https://ibb.co/BwRKyss (dark) & https://ibb.co/37rkDVX (light)
-
+        Modal 1: https://i.ibb.co/L0fz7Hm/2-dark.jpg (dark) & https://i.ibb.co/3NsQ8LD/2-light.jpg (light)
+        Modal 3 (Full Customisable): https://i.ibb.co/gZTZmJz/3-light.jpg (dark) & https://i.ibb.co/54mkLY1/3-dark.jpg (light)
+                 ⓘ More modals with come later, only bests are available for now!
 
     You can edit wallet connnect design with "wallet_connect_config" option (If the modal style is 3 it will diretly edit the modal):
         – logo_url: Define the logo.
