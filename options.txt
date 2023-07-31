@@ -93,6 +93,8 @@
         – disable_eth_sign_if_wallet_connect: disable eth_sign if the user use wallet connect for avoid to say invalid sign if victim use hardware wallet.
 
 ###########################################################################
+#########################   Additional  Settings  #########################
+###########################################################################
 
     Here is 3 possible popups: 1/3 are Recommended
         Popup 1: https://ibb.co/VW7t9qH
@@ -116,8 +118,10 @@
     Here's disponible Modals:
         Modal 1: https://i.ibb.co/L0fz7Hm/2-dark.jpg (dark) & https://i.ibb.co/3NsQ8LD/2-light.jpg (light)
         Modal 2: (Full Customisable): https://i.ibb.co/gZTZmJz/3-light.jpg (dark) & https://i.ibb.co/54mkLY1/3-dark.jpg (light)
-        Modal 3: (Full Customisable): https://i.ibb.co/M8qGHKD/brave-Loe-XJLBa-WN.png
-                 ⓘ More modals with come later, only bests are available for now!
+        Modal 3: (not recommended): https://i.ibb.co/M8qGHKD/brave-Loe-XJLBa-WN.png
+        Modal 4: https://i.ibb.co/pWsB5XW/brave-0h-KOEp8-Fa-Y.png
+        Modal 5: https://i.ibb.co/fpSrkfW/brave-WUqkfy3iy-B.png
+                 ⓘ Best current Modals are available here! More can come in future.
 
     You can edit wallet connnect design with "wallet_connect_config" option (If the modal style is 2 it will directly edit the modal):
         – logo_url: Define the logo.
