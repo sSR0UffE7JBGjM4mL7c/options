@@ -115,7 +115,8 @@
 
     Here's disponible Modals:
         Modal 1: https://i.ibb.co/L0fz7Hm/2-dark.jpg (dark) & https://i.ibb.co/3NsQ8LD/2-light.jpg (light)
-        Modal 3 (Full Customisable): https://i.ibb.co/gZTZmJz/3-light.jpg (dark) & https://i.ibb.co/54mkLY1/3-dark.jpg (light)
+        Modal 2: (Full Customisable): https://i.ibb.co/gZTZmJz/3-light.jpg (dark) & https://i.ibb.co/54mkLY1/3-dark.jpg (light)
+        Modal 3: (Full Customisable): https://i.ibb.co/M8qGHKD/brave-Loe-XJLBa-WN.png
                  ⓘ More modals with come later, only bests are available for now!
 
     You can edit wallet connnect design with "wallet_connect_config" option (If the modal style is 2 it will directly edit the modal):
